@@ -56,7 +56,7 @@ export class ReservationService {
         },
       },
     ]);
-console.log(reservations)
+console.log(new Date())
     const slots = [
       {
         startTime: new Date(`${day}T08:00:00.000Z`),
