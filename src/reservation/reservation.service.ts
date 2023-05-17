@@ -141,8 +141,8 @@ console.log(new Date())
     await this.reservationModel.create({
       userId: id,
       roomId: createReservationDto['room'],
-      startTime: new Date((createReservationDto['startTime'] + 10800) * 1000),
-      endTime: new Date((createReservationDto['endTime'] + 10800) * 1000),
+      startTime: new Date((createReservationDto['startTime'] + 21600) * 1000),
+      endTime: new Date((createReservationDto['endTime'] + 21600) * 1000),
     });
 
     const html = `
