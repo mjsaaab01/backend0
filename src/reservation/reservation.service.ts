@@ -141,8 +141,8 @@ console.log(new Date())
     await this.reservationModel.create({
       userId: id,
       roomId: createReservationDto['room'],
-      startTime: new Date((createReservationDto['startTime'] + 21600) * 1000),
-      endTime: new Date((createReservationDto['endTime'] + 21600) * 1000),
+      startTime: new Date((createReservationDto['startTime'] + 10800) * 1000),
+      endTime: new Date((createReservationDto['endTime'] + 10800) * 1000),
     });
 
     const html = `
@@ -160,12 +160,12 @@ console.log(new Date())
                         </p>
                         <p>
                           <b>From:</b> ${new Date(
-                            createReservationDto['startTime'] * 1000,
+                            (createReservationDto['startTime'] + 10800) * 1000,
                           ).getHours()}:00
                         </p>
                         <p>
                           <b>To:</b> ${new Date(
-                            createReservationDto['endTime'] * 1000,
+                            (createReservationDto['endTime'] + 10800) * 1000,
                           ).getHours()}:00
                         </p>
                         <br />
